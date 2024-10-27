@@ -5,7 +5,7 @@ const { Web3 } = require('web3');
 const web3 = new Web3(ganache.provider());
 
 // const { abi, bytecode, evm } = require('../compile.js');
-const { abi, bytecode, evm } = require('../Lottery.json');
+const { abi, bytecode, evm } = require('../artifacts/Lottery.json');
 
 let lottery;
 let defaultAccount;

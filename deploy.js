@@ -9,7 +9,7 @@ const fs = require("fs");
 const contractName = 'Lottery';
 const contractFileName = `${contractName}.sol`;
 
-const { abi, bytecode } = JSON.parse(fs.readFileSync(contractName + ".json"));
+const { abi, bytecode } = JSON.parse(fs.readFileSync("artifacts/" + contractName + ".json"));
 
 async function main() {
     // Configuring the connection to an Ethereum node
