@@ -1,0 +1,20 @@
+{
+  "name": "lottery-contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "ganache": "ganache --wallet.seed myCustomSeed"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ganache": "^7.9.2",
+    "ganache-cli": "^6.12.2",
+    "mocha": "^10.7.3",
+    "solc": "^0.8.28",
+    "web3": "^4.14.0"
+  }
+}
