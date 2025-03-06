@@ -16,11 +16,12 @@ contract Lottery {
     }
 
     function enter() public payable {
-        require(msg.value > .01 ether);
+        // require(msg.value > .01 ether);
+        require(msg.value >= 0.02 ether, "Minimum 0.02 ETH required");
         players.push(msg.sender);
     }
 
-    function random() public view returns (uint256) {
+    function random() internal view returns (uint256) {
         return
             uint256(
                 keccak256(
@@ -35,7 +36,8 @@ contract Lottery {
         uint256 index = random() % players.length;
         payable(players[index]).transfer(address(this).balance);
 
-        players = new address[](0);
+        // players = new address[](0);
+        delete players;
     }
 
     modifier restricted() {
